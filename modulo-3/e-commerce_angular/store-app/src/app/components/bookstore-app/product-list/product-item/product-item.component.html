@@ -1,1 +1,27 @@
-<p>product-item works!</p>
+<div class="card shadow-sm">
+  <img
+    class="bd-placeholder-img card-img-top"
+    width="100%"
+    [src]="livro.image"
+    alt="#"
+  />
+
+  <div class="card-body">
+    <h5 class="card-title">{{ livro.title }}</h5>
+    <h6 class="card-subtitle">{{ livro.subtitle }}</h6>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">ISBN: {{ livro.isbn13 }}</li>
+    <li class="list-group-item">
+      Preço: {{ livro.priceInNumber | currency: "BRL" }}
+    </li>
+  </ul>
+
+  <div class="card-body">
+    <div class="btn-group d-flex justify-content-evenly">
+      <button class="btn btn-secondary">Detalhes</button>
+      <button class="btn btn-success">Comprar</button>
+    </div>
+  </div>
+</div>
